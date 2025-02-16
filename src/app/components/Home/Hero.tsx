@@ -38,7 +38,7 @@ export const ReadMoreButton = () => {
 };
 
 
-const HeroSection = ({ onWaitlistClick }: any) => {
+const HeroSection = () => {
   return (
     <div className="lg:w-1/2 lg:pr-20 mb-16 lg:mb-0">
       <motion.h1 
