@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.syntax-error {
+  position: relative;
+  display: inline-block;
+  z-index: -2;
+}
+
+.syntax-error::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%23ff0000' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 20px 4px;
+}
+
+
+.animated-gradient {
+  background: linear-gradient(
+    to right,
+    #f34040,
+    #6600ff,
+    #d9ff00,
+    #ececec
+  );
+  background-size: 300% auto;
+  animation: gradientAnimation 8s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: #000000;
+  background-image: 
+    /* Primary glow */
+    radial-gradient(circle at 30% 10%, rgba(13, 240, 202, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(78, 13, 240, 0.15) 0%, transparent 35%),
+    /* Secondary subtle glow */
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    /* Grid pattern */
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    50px 50px,
+    50px 50px,
+    50px 50px;
+  background-position: 
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    25px 25px;
+  position: relative;
+}
+
+/* Add subtle animation to the background */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 1)
+  );
+  pointer-events: none;
+}
+
+.navbar-container {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.2s ease;
+}
+
+.navbar-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 1),
+    0 0 40px rgba(255, 255, 255, 0.03),
+    inset 0 0 20px rgba(255, 255, 255, 0.03);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.navbar-container::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.01)
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* .navbar-container:hover::before {
+  box-shadow: 
+    0 0 25px rgba(255, 255, 255, 0.02),
+    0 0 50px rgba(255, 255, 255, 0.05),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+} */
+
+
+/* Monochrome gradient */
+.mono-gradient {
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #a0a0a0
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Enhanced button styles */
+.primary-cta {
+  @apply flex items-center justify-center px-8 py-4 text-lg font-semibold text-white rounded-full;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.primary-cta:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 25px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+
+.secondary-cta:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Optional: Add these font settings to your existing styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Optional: Add subtle text shadow for better contrast */
+h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.updates-container {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.update-card {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.update-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 1),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.update-card:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.update-card:hover::before {
+  opacity: 1;
+}
+
+/* Container wrapper - add this to your page layout if needed */
+.section-wrapper {
+  @apply container mx-auto px-4 py-20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
