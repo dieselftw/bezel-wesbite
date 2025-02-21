@@ -2,6 +2,11 @@ import { motion } from 'framer-motion';
 
 const updates = [
   {
+    title: "GTM!",
+    description: "The library is officially usable, and stable. v0.1.0 has been released publically!",
+    date: "21 February 2025"
+  },
+  {
     title: "Zod",
     description: "Added support for Zod for maximum flexibility. There's a lot left to be done, but the library is now officially usable.",
     date: "15 February 2025"
@@ -11,11 +16,6 @@ const updates = [
     description: "Bezel supports OpenAI and Groq now! Remember to bring your API keys. Customize your experience to fit your workflow.",
     date: "14 February 2025"
   },
-  {
-    title: "Introducing Bezel",
-    description: "The world is a little slightly better place when it's safe. TypeSafe.",
-    date: "12 February 2025"
-  }
 ];
 
 const UpdatesSection = () => {
