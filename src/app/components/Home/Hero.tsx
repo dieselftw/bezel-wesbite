@@ -58,7 +58,7 @@ const InstallCommand = () => {
 const NPMButton = () => {
   return (
     <a 
-      href="https://www.npmjs.com/package/bezel" 
+      href="https://www.npmjs.com/package/bezel-ai" 
       target="_blank" 
       rel="noopener noreferrer" 
       className="npm-link w-64"
