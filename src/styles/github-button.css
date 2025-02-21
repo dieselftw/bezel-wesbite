@@ -14,7 +14,7 @@
 }
 
 .github-link:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.226);
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
@@ -38,3 +38,42 @@
 .github-link:hover .github-icon {
   opacity: 1;
 }
+
+
+.npm-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.npm-link:hover {
+  background: rgba(20, 221, 47, 0.479);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.github-icon {
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.github-text {
+  position: relative;
+  top: 1px;
+}
+
+.github-link:hover .github-icon {
+  opacity: 1;
+}
+

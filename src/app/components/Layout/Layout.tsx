@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       {children}    
     </>
-  );
+  );22
 };
 
 export default Layout;

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const updates = [
   {
-    title: "Zod - One Schema To Rule Them All",
+    title: "Zod",
     description: "Added support for Zod for maximum flexibility. There's a lot left to be done, but the library is now officially usable.",
     date: "15 February 2025"
   },
